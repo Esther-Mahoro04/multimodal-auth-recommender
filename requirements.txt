@@ -9,3 +9,5 @@ pillow
 librosa
 soundfile
 scipy
+scikit-image
+xgboost
