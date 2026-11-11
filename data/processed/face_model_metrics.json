@@ -1,0 +1,30 @@
+{
+  "best": "logistic_regression",
+  "cv": {
+    "logistic_regression": {
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "log_loss": 0.0893
+    },
+    "random_forest": {
+      "accuracy": 0.8611,
+      "f1_macro": 0.8601,
+      "log_loss": 0.4144
+    },
+    "xgboost": {
+      "accuracy": 0.7778,
+      "f1_macro": 0.7771,
+      "log_loss": 0.515
+    }
+  },
+  "open_set": {
+    "metric": "cosine",
+    "threshold": 0.4,
+    "genuine_worst": 0.3778,
+    "genuine_median": 0.5092,
+    "impostor_median": 0.2285,
+    "impostor_best": 0.2799,
+    "member_FRR": 0.0556,
+    "member_vs_member_FAR": 0.0
+  }
+}
