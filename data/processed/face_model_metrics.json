@@ -2,29 +2,29 @@
   "best": "logistic_regression",
   "cv": {
     "logistic_regression": {
-      "accuracy": 0.9841,
-      "f1_macro": 0.9844,
-      "log_loss": 0.1688
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "log_loss": 0.1215
     },
     "random_forest": {
-      "accuracy": 0.8413,
-      "f1_macro": 0.8135,
-      "log_loss": 0.6784
+      "accuracy": 0.9556,
+      "f1_macro": 0.9499,
+      "log_loss": 0.5611
     },
     "xgboost": {
-      "accuracy": 0.8571,
-      "f1_macro": 0.8491,
-      "log_loss": 0.3693
+      "accuracy": 0.9333,
+      "f1_macro": 0.9277,
+      "log_loss": 0.3306
     }
   },
   "open_set": {
     "metric": "cosine",
     "threshold": 0.4,
     "genuine_worst": 0.3778,
-    "genuine_median": 0.6789,
-    "impostor_median": 0.3476,
+    "genuine_median": 0.8004,
+    "impostor_median": 0.314,
     "impostor_best": 0.4387,
-    "member_FRR": 0.0317,
-    "member_vs_member_FAR": 0.1429
+    "member_FRR": 0.0222,
+    "member_vs_member_FAR": 0.1
   }
 }
