@@ -1,0 +1,38 @@
+{
+  "face": {
+    "cv": "leave-one-expression-out",
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "log_loss": 0.1215
+  },
+  "voice": {
+    "cv": "leave-one-recording-out",
+    "accuracy": 0.675,
+    "f1_macro": 0.6315,
+    "log_loss": 0.9671,
+    "random_split_for_comparison": {
+      "accuracy": 0.925,
+      "f1_macro": 0.925,
+      "log_loss": 0.5639
+    }
+  },
+  "product": {
+    "cv": "stratified 5-fold",
+    "accuracy": 0.2733,
+    "f1_macro": 0.2643,
+    "log_loss": 1.6857,
+    "baseline_majority_class": 0.2333
+  },
+  "multimodal": {
+    "face_only_accept_rate_genuine": 0.9333,
+    "voice_only_stranger_accepted_as_a_member": 0.875,
+    "system_true_accept_rate (genuine face + own voice)": 0.7083,
+    "system_false_accept_rate (face + another member's voice)": 0.0565,
+    "system_false_accept_rate (face + stranger's voice)": 0.2472,
+    "pairs_tested": {
+      "genuine": 720,
+      "other_member_voice": 2160,
+      "stranger_voice": 720
+    }
+  }
+}
