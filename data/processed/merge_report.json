@@ -1,0 +1,145 @@
+{
+  "raw": {
+    "social": {
+      "rows": 155,
+      "columns": 5,
+      "dtypes": {
+        "customer_id_new": "str",
+        "social_media_platform": "str",
+        "engagement_score": "int64",
+        "purchase_interest_score": "float64",
+        "review_sentiment": "str"
+      },
+      "nulls": {},
+      "exact_duplicate_rows": 5
+    },
+    "transactions": {
+      "rows": 150,
+      "columns": 6,
+      "dtypes": {
+        "customer_id_legacy": "int64",
+        "transaction_id": "int64",
+        "purchase_amount": "int64",
+        "purchase_date": "str",
+        "product_category": "str",
+        "customer_rating": "float64"
+      },
+      "nulls": {
+        "customer_rating": 10
+      },
+      "exact_duplicate_rows": 0
+    }
+  },
+  "social_exact_duplicates_dropped": 5,
+  "ratings_imputed": {
+    "count": 10,
+    "value": 3.0
+  },
+  "range_checks": {
+    "purchase_amount > 0": true,
+    "customer_rating in [1, 5]": true,
+    "engagement_score in [0, 100]": true,
+    "purchase_interest_score in [1, 5]": true,
+    "review_sentiment in {Positive, Neutral, Negative}": true
+  },
+  "keys": {
+    "transaction_customers": 75,
+    "social_customers": 84,
+    "customers_in_both": 61,
+    "transaction_customers_without_social": 14,
+    "social_customers_without_transactions": 23
+  },
+  "join": {
+    "type": "left on customer_id (many transactions : one social summary)",
+    "both": 117,
+    "left_only": 33,
+    "right_only": 0
+  },
+  "post_merge_nulls_before_fill": {
+    "avg_engagement": 33,
+    "avg_purchase_interest": 33,
+    "n_social_profiles": 33,
+    "top_platform": 33,
+    "top_sentiment": 33
+  },
+  "post_merge_checks": {
+    "row count unchanged (no rows gained or lost)": true,
+    "transaction_id still unique": true,
+    "purchase_amount total unchanged": true,
+    "product_category distribution unchanged": true,
+    "no nulls left": true,
+    "spot check customer 100: avg_engagement matches raw rows": true,
+    "spot check customer 100: n_social_profiles matches raw rows": true
+  },
+  "summary_statistics": {
+    "purchase_amount": {
+      "count": 150.0,
+      "mean": 280.78,
+      "std": 121.33,
+      "min": 51.0,
+      "25%": 179.0,
+      "50%": 274.0,
+      "75%": 388.5,
+      "max": 495.0
+    },
+    "customer_rating": {
+      "count": 150.0,
+      "mean": 2.99,
+      "std": 1.17,
+      "min": 1.0,
+      "25%": 2.1,
+      "50%": 3.0,
+      "75%": 4.0,
+      "max": 5.0
+    },
+    "avg_engagement": {
+      "count": 150.0,
+      "mean": 74.78,
+      "std": 11.25,
+      "min": 50.0,
+      "25%": 68.31,
+      "50%": 77.0,
+      "75%": 81.0,
+      "max": 99.0
+    },
+    "avg_purchase_interest": {
+      "count": 150.0,
+      "mean": 3.09,
+      "std": 0.92,
+      "min": 1.0,
+      "25%": 2.73,
+      "50%": 3.13,
+      "75%": 3.6,
+      "max": 4.8
+    },
+    "n_social_profiles": {
+      "count": 150.0,
+      "mean": 1.42,
+      "std": 1.09,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 2.0,
+      "max": 4.0
+    }
+  },
+  "target_counts": {
+    "Sports": 35,
+    "Electronics": 34,
+    "Clothing": 28,
+    "Groceries": 28,
+    "Books": 25
+  },
+  "iqr_outliers": {
+    "purchase_amount": 0,
+    "customer_rating": 0,
+    "avg_engagement": 0,
+    "avg_purchase_interest": 13,
+    "n_social_profiles": 5
+  },
+  "output": {
+    "file": "data/processed/merged_dataset.csv",
+    "rows": 150,
+    "columns": 19
+  }
+}
