@@ -32,6 +32,16 @@ notebooks/         Jupyter notebooks
 
 ## Who owns what
 
+## Product model (Member 1: Esther Mahoro)
+
+- Merged the social profiles and transactions into one dataset of 150 rows.
+- Cleaned the data: removed 5 duplicates, fixed customer IDs, filled 10 missing ratings.
+- Made 6 EDA plots and built 22 features.
+- Trained Random Forest and Logistic Regression.
+- Result: cross-validation accuracy 0.27 (Random Forest) and 0.22 (Logistic Regression). Random guessing gives 0.20, so the data has only a weak link to the product.
+- Saved model: `models/product_model.pkl`
+- Notebook: `notebooks/Formative2ML.ipynb`
+
 | Member | Owns |
 |---|---|
 | Member 1 | product model, feature engineering, `scripts/product_model.py` |
@@ -60,7 +70,7 @@ python scripts/main.py      # run from the repo root
 
 | Member | Contribution |
 |---|---|
-| Member 1 | |
+| Member 1 |Data merge, EDA, feature engineering, product model, report section |
 | Member 2 | |
 | Member 3 | |
 | Member 4 | |
