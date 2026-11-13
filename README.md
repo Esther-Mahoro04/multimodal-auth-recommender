@@ -156,8 +156,7 @@ python scripts/main.py --demo --member member4            # all scenarios + summ
 | Member 1 |Data merge, EDA, feature engineering, product model, report section |
 | Member 2 | |
 | Member 3 | |
-| Member 4 | | Data Merge, Exploratory Data Analysis, Data Cleaning & Merge Validation, Evaluation & Multimodal Logic, System Simulation (command-line app with full transaction and unauthorized attempts) 
-
+| Member 4 | | Data Merge, Exploratory Data Analysis, Data Cleaning & Merge Validation, Evaluation & Multimodal Logic, System Simulation |
 ## Links
 
 - Demo video: _add link_
